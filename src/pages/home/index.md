@@ -6,7 +6,6 @@ headerImage:
 title: Meet other JavaScript Developers in Wakanda
 upcomingMeetupHeading: Upcoming Meetup
 noUpcomingMeetupText: Details to be announced.
-mapsNote: Clicking the pin opens Google Maps in a new tab.
 callToActions:
   firstCTA:
     heading: Past Meetups

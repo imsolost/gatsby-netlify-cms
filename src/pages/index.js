@@ -5,7 +5,6 @@ import Helmet from "react-helmet";
 import isAfter from "date-fns/is_after";
 
 import Layout from "../components/Layout";
-import Map from "../components/Map";
 import HeadshotPlaceholder from "../img/headshot-placeholder.svg";
 import CustomLink from "../components/CustomLink";
 import "../styles/home.scss";
@@ -56,18 +55,6 @@ export const HomePageTemplate = ({ home, upcomingMeetup = null }) => {
                 </div>
               )}
               <p className="upcomingMeetup-mapNote">{home.mapsNote}</p>
-              <div className="upcomingMeetup-mapWrapper">
-                <Map
-                  isMarkerShown
-                  googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTxauB_VWpo0_8hWELlE3pN59uuHzxD-8&v=3.exp&libraries=geometry,drawing,places"
-                  loadingElement={<div style={{ height: `100%` }} />}
-                  containerElement={<div style={{ height: `100%` }} />}
-                  mapElement={<div style={{ height: `100%` }} />}
-                  link={upcomingMeetup.location.mapsLink}
-                  latitude={latitude}
-                  longitude={longitude}
-                />
-              </div>
             </>
           ) : (
             <p className="upcomingMeetup-detail">{home.noUpcomingMeetupText}</p>
