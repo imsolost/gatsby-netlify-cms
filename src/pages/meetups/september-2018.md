@@ -26,10 +26,5 @@ presenters:
       to bring quality, cross platform JS products to market. Today, they will
       show us the patterns, structures and challenges of building large scale
       cross platform apps.
-location:
-  mapsLatitude: 64.843779
-  mapsLink: 'https://goo.gl/maps/Rm6ihxVrZGK2'
-  mapsLongitude: -147.718189
-  name: Fairbanks Ice Museum
 ---
 

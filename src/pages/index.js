@@ -11,8 +11,6 @@ import "../styles/home.scss";
 
 export const HomePageTemplate = ({ home, upcomingMeetup = null }) => {
   const presenters = upcomingMeetup && upcomingMeetup.presenters;
-  const latitude = upcomingMeetup && parseFloat(upcomingMeetup.location.mapsLatitude);
-  const longitude = upcomingMeetup && parseFloat(upcomingMeetup.location.mapsLongitude);
   return (
     <>
       <section className="header">
@@ -32,10 +30,6 @@ export const HomePageTemplate = ({ home, upcomingMeetup = null }) => {
                 <span className="upcomingMeetup-detailLabel">Date: </span>
                 {upcomingMeetup.formattedDate}
               </p>
-              <p className="upcomingMeetup-detail  upcomingMeetup-detail--location">
-                <span className="upcomingMeetup-detailLabel">Location: </span>
-                {upcomingMeetup.location.name}
-              </p>
               {presenters.length > 0 && (
                 <div className="upcomingMeetup-presenters">
                   {presenters.map(presenter => (
@@ -54,7 +48,6 @@ export const HomePageTemplate = ({ home, upcomingMeetup = null }) => {
                   ))}
                 </div>
               )}
-              <p className="upcomingMeetup-mapNote">{home.mapsNote}</p>
             </>
           ) : (
             <p className="upcomingMeetup-detail">{home.noUpcomingMeetupText}</p>
@@ -149,12 +142,6 @@ export const pageQuery = graphql`
               text
               presentationTitle
             }
-            location {
-              mapsLatitude
-              mapsLongitude
-              mapsLink
-              name
-            }
           }
         }
       }
@@ -171,7 +158,6 @@ export const pageQuery = graphql`
             }
             upcomingMeetupHeading
             noUpcomingMeetupText
-            mapsNote
             callToActions {
               firstCTA {
                 heading

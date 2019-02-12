@@ -52,16 +52,6 @@ collections:
               },
             ],
         }
-      - {
-          label: "Location",
-          name: "location",
-          required: true,
-          widget: "object",
-          fields:
-            [
-              { label: "Name", name: "name", widget: "string" },
-            ],
-        }
   - name: "pages"
     label: "Pages"
     files:

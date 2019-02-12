@@ -114,9 +114,6 @@ export const pastMeetupsPageQuery = graphql`
                 linkURL
               }
             }
-            location {
-              name
-            }
           }
         }
       }

@@ -22,10 +22,5 @@ presenters:
     text: >-
       Scott will take use through the Meteor JavaScript framework and how it’s
       awesome in every way.
-location:
-  mapsLatitude: 64.843779
-  mapsLink: 'https://goo.gl/maps/Rm6ihxVrZGK2'
-  mapsLongitude: -147.718189
-  name: Fairbanks Ice Museum
 ---
 

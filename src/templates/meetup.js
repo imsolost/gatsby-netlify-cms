@@ -16,9 +16,6 @@ class MeetupTemplate extends Component {
           <p className="meetup-metaField  meetup-metaField--date">
             <span className="meetup-label">Date:</span> {this.props.meetup.formattedDate}
           </p>
-          <p className="meetup-metaField  meetup-metaField--location">
-            <span className="meetup-label">Location:</span> {this.props.meetup.location.name}
-          </p>
         </div>
         <div className="meetup-presenters">
           {this.props.meetup.presenters.map(presenter => (
